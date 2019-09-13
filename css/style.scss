@@ -1,0 +1,1068 @@
+$h2-color: #383838;
+$page-width: 1100px;
+$bookingForm-border-bottom-color: #dbdbdb;
+$header-bg-color: #003580;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+header {
+  background-color: $header-bg-color;
+  color: #fff;
+  #logo img {
+    height: 30px;
+    margin: 10px 0 15px 0 ;
+  }
+  #signInSignUp {
+    margin-top: 10px;
+    .currency {
+      display: inline-block;
+      height: 24px;
+      margin-top: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    .flag {
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+      margin: 0 25px;
+      background: url('../images/canadian-flag-icon.png');
+    }
+    ul li a {
+      display: block;
+      text-decoration: none;
+      font-size: 0.7rem;
+      padding: 6px 7px;
+      border-radius: 5px;
+      border: 1px solid white;
+    }
+    .transparent {
+      font-weight: 600;
+    }
+    .transparent:hover {
+      background-color: rgb(224, 224, 224, 0.2);
+    }
+    .regular {
+      border-radius: 5px;
+      background-color: #fff;
+      margin-left: 15px;
+      a {
+        color: $header-bg-color;
+        font-weight: 900;
+      }
+      :hover {
+        color: purple;
+      }
+    }
+  }
+  #headerBox {
+    position: relative;
+    width: $page-width;
+    margin: auto;
+    #signInSignUp {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #fff;
+      .transparent a {
+        color: #fff;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li {
+        float: left;
+      }
+    }
+    nav { 
+      ul {
+        display: flex;
+        flex-wrap: nowrap; 
+        list-style: none;
+        li {
+          flex: 1;
+          a {
+            position: relative;
+            display: inline-block;
+            color: rgb(224, 224, 224);
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 15px 10px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            i {
+              margin-right: 10px;
+            }
+          }
+          :hover {
+            color: #fff;
+            transition: color 0.3s;
+          }
+          .active {
+            border-bottom: 4px solid white;
+          }
+          :not(.active):after {  
+            content: "";
+            position: absolute;
+            bottom: 0;
+            display: block;
+            height: 4px;
+            left: 50%;
+            background: #fff;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+          }
+          :hover:after {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+#bookingForm {
+  background-color: #F7F7F7;
+  border-bottom: 1px solid #dbdbdb;
+  #bookingFormBox {
+    width: $page-width;
+    margin: auto;
+    color: $h2-color;
+    form {
+      div {
+        box-shadow: 0px 0px 29px -9px rgba(0,0,0,0.55);
+        display: flex;
+        input {
+          font-size: 1rem;
+        }
+        input.destination {
+          flex: 5;
+        }
+        input.dates {
+          flex: 2;
+        }
+        input.people {
+          flex: 2;
+        }
+        input.submit {
+          flex: 1;
+          margin: 0;
+          padding: 16px;
+          height: 100%;
+          line-height: 100%;
+          background-color: #0077CC;
+          line-height: 100%;
+          color: #fff;
+          display: inline-block;
+          font-size: 1rem;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        input.submit:hover {
+          background-color: #0a51b6;
+        }
+      }
+      .work[type=checkbox] {
+        display: none;
+      }
+      .work[type=checkbox] + label {
+        cursor: pointer;
+      }
+      .work[type=checkbox] + label:before {
+        content: "\2714";
+        border: 0.1em solid rgb(112, 112, 112);
+        border-radius: 0.2em;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        padding-left: 0.2em;
+        padding-bottom: 0.3em;
+        margin-right: 0.2em;
+        color: transparent;
+        transition: 0.2s;
+        margin-top: 22px;
+        margin-bottom: 30px;
+      }
+      .work[type=checkbox] + label:active:before {
+        transform: scale(0);
+      }
+      input.work[type=checkbox]:checked + label:before {
+        background-color: blueviolet;
+        border-color: blueviolet;
+        color: #fff;
+      }
+    }
+    h2 {
+      padding: 40px 0 0 0;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 0.8rem;
+      margin-bottom: 15px;
+    }
+    input:not(.work) {
+      display: inline-block;
+      margin: 0;
+      padding: 24px 30px;
+      outline: 3px solid yellow;
+      border: none;
+      height: 30px;
+      
+    }
+  }
+}
+#dealsGallery {
+  width: $page-width;
+  margin: auto;
+  #todaysSpecialDeal {
+    margin: 15px 0 0 0;
+    border: 1px solid $bookingForm-border-bottom-color;
+    padding: 15px;
+    font-size: 0.8rem;
+    p {
+      display: inline;
+    }
+    a {
+      font-weight: bold;
+    }
+    a:hover {
+      color: rgb(212, 212, 16);
+    }
+    .doughnut {
+      vertical-align: middle;
+      height: 25px;
+      width: 25px;
+      margin-right: 15px;
+    }
+    .close {
+      float: right;
+      color: $bookingForm-border-bottom-color;
+      font-size: 25px;
+    }
+  }
+  #todaysSpecialDeal.hide {
+    display: none;
+  }
+  #locationPictureGallery {
+    margin-top: 25px;
+  }
+  .large,
+  .medium {
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    border-radius: 2px;
+  }
+  .large {
+    width: $page-width;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    div.item1,
+    div.item2 {
+      position: relative;
+      background-size: cover;
+      background-position: center center;
+      width: auto;
+      height: 280px;
+      padding: 15px 10px 10px 10px;
+      overflow: hidden;
+      cursor: pointer;
+     .img {
+       position: absolute;
+       top: 0;
+       left: 0;
+       z-index: -1;
+       height: 100%;
+       width: 100%;
+       background-image: url('../images/skiresort.jpg');
+       background-size: cover;
+       background-repeat: none;
+       transition: all 0.5s;
+     }
+     &:hover .img {
+       transform: scale(1.15);
+     }
+      h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        span.flag {
+          display: inline-block;
+          height: 24px;
+          width: 24px;
+          background-image: url('../images/canadian-flag-icon.png');
+          margin-bottom: -5px;
+        }
+      }
+      p {
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+      .avgPrice {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        text-align: right;
+        display: inline-block;
+        background-color: #383838;
+        border-radius: 2px;
+        padding: 5px;
+        h4 {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+  .medium {
+    width: $page-width;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+    grid-gap: 15px;
+    div.item1,
+    div.item2,
+    div.item3 {
+      position: relative;
+      display: inline-block;
+      width: auto;
+      height: 280px;
+      overflow: hidden;
+      cursor: pointer;
+      .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        background-image: url("../images/building.jpg");
+        background-size: cover;
+        background-position: center center;
+        transition: all 0.5s;
+      }
+      &:hover .img {
+        transform: scale(1.15);
+      }
+      h3 {
+        margin: 10px 0 0 10px;
+      }
+      p {
+        margin-left: 10px;
+      }
+      .avgPrice {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        text-align: right;
+        display: inline-block;
+        background-color: #383838;
+        border-radius: 2px;
+        padding: 5px;
+        h4 {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
+#sortedDeals {
+  width: $page-width;
+  margin: 0 auto;
+  h3 {
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin: 35px 0 25px;
+  }
+  .dealsCarousel {
+    overflow: hidden;
+    .arrows {
+      position: relative;
+      z-index: 100;
+      .left {
+        position: absolute;
+        left: 10px;
+        top: 110px;
+        font-size: 1.5em;
+        border-radius: 50%;
+        color: rgb(56, 56, 56);
+        background: #fff;
+        width: 36px;
+        height: 36px;
+        opacity: 0.8;
+        padding-left: 9px;
+        padding-top: 4px;
+        border: 1px solid grey;
+        transition: all 0.2s;
+      }
+      .right {
+        position: absolute;
+        right: 10px;
+        top: 110px;
+        font-size: 1.5em;
+        border-radius: 50%;
+        color: rgb(56, 56, 56);
+        background: #fff;
+        width: 36px;
+        height: 36px;
+        opacity: 0.8;
+        padding-left: 10px;
+        padding-top: 4px;
+        border: 1px solid grey;
+        transition: all 0.2s;
+      }
+      .left:hover,
+      .right:hover {
+        top: 112px;
+        opacity: 1;
+      }
+    }
+  }
+  ul {
+    position: relative;
+    width: 200%;
+    height: 300px;
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    overflow: hidden;
+    left: 0;
+    transition: left 0.5s;
+    li {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 300px;
+      .img {
+        left: 50%;
+        margin-left: -50%;
+        img {
+          width: 100%;
+          height: 250px;
+        }
+      }
+      .box {
+        overflow: hidden;
+        .details {
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+}
+#luxurySuites {
+  width: $page-width;
+  margin: 0 auto;
+  h3 {
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin: 35px 0 25px;
+  }
+  .dealsCarousel {
+    overflow: hidden;
+    .arrows {
+      position: relative;
+      z-index: 100;
+      .left {
+        position: absolute;
+        left: 10px;
+        top: 110px;
+        font-size: 1.5em;
+        border-radius: 50%;
+        color: rgb(56, 56, 56);
+        background: #fff;
+        width: 36px;
+        height: 36px;
+        opacity: 0.8;
+        padding-left: 9px;
+        padding-top: 4px;
+        border: 1px solid grey;
+        transition: all 0.2s;
+      }
+      .right {
+        position: absolute;
+        right: 10px;
+        top: 110px;
+        font-size: 1.5em;
+        border-radius: 50%;
+        color: rgb(56, 56, 56);
+        background: #fff;
+        width: 36px;
+        height: 36px;
+        opacity: 0.8;
+        padding-left: 10px;
+        padding-top: 4px;
+        border: 1px solid grey;
+        transition: all 0.2s;
+      }
+      .left:hover,
+      .right:hover {
+        top: 112px;
+        opacity: 1;
+      }
+    }
+  }
+  ul {
+    position: relative;
+    width: 250%;
+    height: 360px;
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    overflow: hidden;
+    left: 0;
+    transition: left 0.5s;
+    li {
+      position: relative;
+      overflow: hidden;
+      width: 265px;
+      height: 360px;
+      .img {
+        left: 50%;
+        margin-left: -50%;
+        img {
+          width: 100%;
+        }
+        img:not(.last) {
+          height: 250px;
+        }
+      }
+      .box {
+        overflow: hidden;
+        .details {
+          margin-left: 2px;
+        }
+      }
+      .box.last {
+        position: relative;
+        .img {
+          height: 100%;
+          img.last {
+            height: 360px;
+          }
+        }
+        .details {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          p {
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: bold;
+            padding: 15px;
+            line-height: 25px;
+            opacity: 0.9;
+          }
+          a {
+            position: absolute;
+            bottom: 5px;
+            display: block;
+            width: 88%;
+            text-align: center;
+            padding: 15px;
+            margin: 15px;
+            border: 1px solid purple;
+            color: purple;
+            background-color: #fff;
+          }
+        }
+      }
+      .details {
+        p {
+          font-size: 0.8rem;
+        }
+        & > span.location {
+          display: block;
+          font-size: 0.8em;
+          color: grey; 
+          margin-top: 2px;
+          margin-bottom: 6px;
+        }
+        p.price {
+          margin-top: 15px;
+          margin-bottom: 7px;
+          & > strong {
+          color: rgb(70, 70, 70);
+        }
+        } 
+        .rating {
+          display: inline-block;
+          background-color: $header-bg-color;
+          border-radius: 8px;
+          border-bottom-left-radius: 0px;
+          text-align: center;
+          color: #fff;
+          font-weight: 600;
+          font-size: 0.8rem;
+          padding: 5px;
+        }
+        a {
+          color: $header-bg-color;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 0.8rem;
+        }
+        .reviews {
+          font-size: 0.7rem;
+          color: grey;
+        }
+      }
+    }
+  }
+}
+#newsletterSignup {
+  position: relative;
+  width: $page-width;
+  margin: 35px auto;
+  border: 1px solid $bookingForm-border-bottom-color;
+  padding: 25px;
+  font-size: 0.8rem;
+  .icon {
+    position: absolute;
+    font-size: 50px;
+    top: 25px;
+    left: 25px;
+  }
+  #newsletterSignupCloseButton {
+    float: right;
+    color: $bookingForm-border-bottom-color;
+    font-size: 25px;
+  }
+  a#newsletterSignupCloseButton:hover {
+    color: orange;
+  }
+  .details {
+    margin-left: 60px;
+    h3 {
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    input {
+      height: 40px;
+      padding: 5px 10px;
+      width: 450px;
+      border: 1px solid rgb(184, 184, 184);
+    }
+    button {
+      background: transparent;
+      outline: 1px solid blue;
+      border: none;
+      padding: 11px;
+      color: blue;
+      cursor: pointer;
+      margin-left: 7px;
+    }
+    button:hover {
+      background-color: rgb(176, 235, 255);
+    }
+  }
+}
+#newsletterSignup.hide {
+  display: none;
+}
+#blogPosts {
+  width: $page-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    'small-left small-left small-middle small-middle small-right small-right'
+    'big-left big-left big-left big-right big-right big-right';
+  grid-gap: 10px;
+  .backdrop {
+    display: none;
+    width: 100%;
+    height: 100%;
+    // background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.459) 0%, rgba(255,255,255,0) 21%, rgba(255,255,255,0) 100%);  
+    transition: all 0.3s;
+  }
+  article {
+    position: relative;
+    background-size: cover;
+    color: white;
+    height: 300px;
+    background-image: url('../images/stoneman.jpg');
+    background-size: cover;
+    border-radius: 2px;
+    cursor: pointer;
+    .details {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 13px;
+      text-shadow: 1px 1px 5px #000;
+      h3 {
+        font-weight: bold;
+        margin-bottom: 5px;
+        line-height: 1.8rem;
+      }
+      p {
+        font-weight: bold;
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+      }
+    }
+    &:hover .backdrop {
+      display: block;
+    }
+  }
+  article:nth-child(1) {
+    grid-area: small-left;
+  }
+  article:nth-child(2) {
+    grid-area: small-middle;
+  }
+  article:nth-child(3) {
+    grid-area: small-right;
+  }
+  article:nth-child(4) {
+    grid-area: big-left;
+  }
+  article:nth-child(5) {
+    grid-area: big-right;
+  }
+}
+// Pure CSS Tabs core code
+#pureCSSTab > input,
+#pureCSSTab section > div {
+  display: none;
+}
+#travelInfoTab1:checked ~ section .travelInfoTab1,
+#travelInfoTab2:checked ~ section .travelInfoTab2,
+#travelInfoTab3:checked ~ section .travelInfoTab3 {
+  display: block;
+}
+#travelInfoTab1:checked ~ nav .travelInfoTab1,
+#travelInfoTab2:checked ~ nav .travelInfoTab2,
+#travelInfoTab3:checked ~ nav .travelInfoTab3 {
+  background-color: #0077CC;
+  color: #fff;
+}
+#CSSTab {
+  width: $page-width;
+  margin: 25px auto;
+  nav ul {
+    display: block;
+    line-height: 30px;
+    list-style: none;
+    border-bottom: 1px solid #0077CC;
+    width: 100%;
+    font-size: 0.8rem;
+    li {
+      display: inline-block;
+      padding: 0 15px;
+      cursor: pointer;
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+  section {
+    clear: both;
+    ul.regions {
+      columns: 5;
+      list-style: none;
+      padding: 15px 0;
+      li {
+        display: block;
+        padding-bottom: 10px;
+        a {
+          display: block;
+          color: #0077CC;
+          text-decoration: none;
+          font-size: 0.8rem;
+        }
+        a:hover {
+          color: orange;
+        }
+        span {
+          font-size: 0.7rem;
+          color: grey;
+        }
+      }
+    }
+  }
+}
+#anotherPureCSSGalleryContainer {
+  width: $page-width;
+  margin: 25px auto;
+  #anotherPureCSSGallery {
+    nav {
+      float: right;
+      margin-bottom: 10px;
+      ul {
+        list-style: none;
+        li {
+          font-size: 0.8rem;
+          display: inline-block;
+          background-color: grey;
+          padding: 4px 7px;
+          text-align: center;
+          color: #fff;
+          cursor: pointer;
+          label {
+            cursor: pointer;
+          }
+        }
+        li:hover {
+          background-color: #0077CC;
+        }
+      }
+    }
+    &>input,
+    section > div {
+      display: none;
+    }
+    section {
+      clear: both;
+      div ul {
+        display: block;
+        list-style: none;
+        columns: 5;
+        li {
+          a {
+            display: block;
+            width: 100%;
+            height: 200px;
+            background: url(../images/golf-field.jpg);
+            text-decoration: none;
+            div {
+              background-color: rgba(0, 0, 0, 0.294);
+              p {
+                text-decoration: none;
+                color: #fff;
+                font-size: 0.7rem;
+                text-align: center;
+                padding: 10px;
+                transition: all 0.5s;
+              }
+            }
+            &:hover {
+              div {
+                height: 100%;
+                p {
+                  padding-top: 75px;
+                }
+              }
+            }
+          }
+        } 
+      }
+      div.tab2 li a {
+        background: url(../images/skiresort.jpg);
+      }
+      div.tab3 li a {
+        background: url(../images/beds.jpg);
+      }
+      div.tab4 li a {
+        background: url(../images/stoneman.jpg);
+      }
+      div.tab5 li a {
+        background: url(../images/skiresort.jpg);
+      }
+      div.tab6 li a {
+        background: url(../images/golf-field.jpg);
+      }
+      div.tab7 li a {
+        background: url(../images/beds.jpg);
+      }
+      div.tab8 li a {
+        background: url(../images/skiresort.jpg);
+      }
+      div.tab9 li a {
+        background: url(../images/stoneman.jpg);
+      }
+      div.tab10 li a {
+        background: url(../images/skiresort.jpg);
+      }
+    }
+    #pureCSSGalleryTab1:checked ~ section .tab1,
+    #pureCSSGalleryTab2:checked ~ section .tab2,
+    #pureCSSGalleryTab3:checked ~ section .tab3,
+    #pureCSSGalleryTab4:checked ~ section .tab4,
+    #pureCSSGalleryTab5:checked ~ section .tab5,
+    #pureCSSGalleryTab6:checked ~ section .tab6,
+    #pureCSSGalleryTab7:checked ~ section .tab7,
+    #pureCSSGalleryTab8:checked ~ section .tab8,
+    #pureCSSGalleryTab9:checked ~ section .tab9,
+    #pureCSSGalleryTab10:checked ~ section .tab10 {
+      display: block;
+    }
+    #pureCSSGalleryTab1:checked ~ nav .tab1,
+    #pureCSSGalleryTab2:checked ~ nav .tab2,
+    #pureCSSGalleryTab3:checked ~ nav .tab3,
+    #pureCSSGalleryTab4:checked ~ nav .tab4,
+    #pureCSSGalleryTab5:checked ~ nav .tab5,
+    #pureCSSGalleryTab6:checked ~ nav .tab6,
+    #pureCSSGalleryTab7:checked ~ nav .tab7,
+    #pureCSSGalleryTab8:checked ~ nav .tab8,
+    #pureCSSGalleryTab9:checked ~ nav .tab9,
+    #pureCSSGalleryTab10:checked ~ nav .tab10 {
+      background-color: #0077CC;
+    }
+    section .tab1 {
+      // grid-template-columns: 'column1 column2 column3 column4 column5'
+    }
+  }
+}
+#newsletterSignup2 {
+  margin-top: 45px;
+  background-color: #001B42;
+  text-align: center;
+  padding-bottom: 10px;
+  h3 {
+    color: #fff;
+    font-weight: 300;
+    padding-top: 40px;
+    font-size: 1.6rem;
+  }
+  p {
+    color: rgb(177, 177, 177);
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+  form {
+    padding: 15px 0 30px 0;
+    input.email {
+      line-height: 50px;
+      border-radius: 3px;
+      border: none;
+      width: 300px;
+      padding: 0 8px;
+      font-size: 1.3rem;
+    }
+    button {
+      line-height: 50px;
+      border: none;
+      background-color: #0077CC;
+      color: #fff;
+      font-size: 1.1rem;
+      border-radius: 3px;
+      padding: 0 20px;
+    }
+    label {
+      color: #fff;
+      font-size: 0.8rem;
+    }
+  }
+}
+#listYourProperty {
+  width: 100%;
+  background-color: #003580;
+  text-align: center;
+  border-bottom: 1px solid grey;
+  button {
+    margin: 25px 0;
+    background: transparent;
+    border: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 7px 16px;
+    border-radius: 2px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.233);
+    }
+  }
+}
+#footerMenu1Container {
+  background-color: #003580;
+  #footerMenu1 {
+    width: $page-width;
+    margin: 0 auto;
+    padding: 18px 0;
+    ul {
+      columns: 6;
+      color: #fff;
+      list-style: none;
+      li {
+        a {
+          color: #fff;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+#footerMenu2Container {
+  #footerMenu2 {
+    width: $page-width;
+    margin: 10px auto;
+    columns: 5;
+    section {
+
+    }
+    ul {
+      list-style: none;
+      li {
+        a {
+          text-decoration: none;
+          font-size: 0.8rem;
+          &:hover {
+            color: orange;
+          }
+        }
+      }
+    }
+  }
+}
+#termsOfService {
+  width: $page-width;
+  margin: 30px auto;
+  border-top: 1px solid rgb(195, 195, 195);
+  border-bottom: 1px solid rgb(195, 195, 195);
+  p {
+    font-size: 0.7rem;
+    padding: 10px 0;
+  }
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #0077CC;
+    &:hover {
+      color: orange;
+    }
+  }
+}
+#loginPortal {
+  text-align: center;
+  a {
+    color: #0077CC;
+    text-decoration: none;
+    font-size:0.8rem;
+    font-weight: 600;
+    &:hover {
+      color: orange;
+    }
+  }
+}
+#copyright {
+  margin-top: 30px;
+  text-align: center;
+  color: grey;
+  font-size: 0.7rem;
+}
+#sponsors {
+  width: 800px;
+  margin: 30px auto 60px auto;
+  ul {
+    columns: 5;
+    list-style: none;
+  }
+}

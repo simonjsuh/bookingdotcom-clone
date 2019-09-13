@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- font awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- Google Fonts - Montserrat -->
+  <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' 
+rel='stylesheet' type='text/css'>
+  
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <title>HTML CSS practice code with Booking.com</title>
+</head>
+<body>
+<div class="container">
+<header>
+  <div id="headerBox">
+    <div id="logo">
+      <img src="./images/logo.png" alt="">
+    </div>
+    <section id='signInSignUp'>
+      <ul>
+        <li class='currency'>CAD</li>
+        <li class='flag'></li>
+        <li class='transparent'><a href="#">List your property</a></li>
+        <li class='regular'><a href="#">Register</a></li>
+        <li class='regular'><a href="#">Sign in</a></li>
+      </ul>
+    </section>
+    <nav>
+      <ul>
+        <li><a class='active' href=""><i class="fa fa-building"></i>Accommodation</a></li>
+        <li><a href=""><i class="fa fa-plane"></i>Flights</a></li>
+        <li><a href=""><i class="fa fa-suitcase"></i>Flight + Hotel</a></li>
+        <li><a href=""><i class="fa fa-car"></i>Car rentals</a></li>
+        <li><a href=""><i class="fa fa-birthday-cake"></i>Tours & Activities</a></li>
+        <li><a href=""><i class="fa fa-taxi"></i>Airport taxis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section id='bookingForm'>
+  <div id="bookingFormBox">
+    <h2>Find deals for any season</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <form action="">
+      <div>
+        <input class='destination' type="text" placeholder="Where are you going?">
+        <input class='dates' type='date' placeholder='Check-in - Check-out'>
+        <input class='people' type="text" placeholder='1 adult - 0 children - 4 rooms'>
+        <input class='submit' type="submit" value='Search'>
+      </div>
+      <input class='work' type="checkbox" id='travellingForWork' name='travellingForWork'>
+      <label for="travellingForWork">I'm travelling for work</label>
+    </form>
+  </div>
+</section>
+<section id='dealsGallery'>
+  <article id='todaysSpecialDeal'>
+    <img class='doughnut' src="./images/donut.svg" alt="">
+    <p>Score huge savings worldwide.</p>
+    <a href="">Search today's deals</a>
+    <a href="" id='todaysSpecialDealCloseButton' class="close">
+      <i class="fa fa-times"></i>
+    </a>
+  </article>
+  <section id="locationPictureGallery">
+    <div class="large">
+      <div class='item1'>
+        <div class="img"></div>
+        <h3>Whislter <span class='flag'></span></h3>
+        <p>269 properties</p>
+        <div class='avgPrice'>
+          <h4>Average price</h4>
+          <p class='price'>CAD 174</p>
+        </div>
+      </div>
+      <div class="item2">
+        <div class="img"></div>
+        <h3>Whislter <span class='flag'></span></h3>
+        <p>269 properties</p>
+        <div class='avgPrice'>
+          <h4>Average price</h4>
+          <p class='price'>CAD 174</p>
+        </div>
+      </div>
+    </div>
+    <div class="medium">
+      <div class='item1'>
+        <div class="img"></div>
+        <h3>Whislter <span class='flag'></span></h3>
+        <p>269 properties</p>
+        <div class='avgPrice'>
+          <h4>Average price</h4>
+          <p class='price'>CAD 174</p>
+        </div>
+      </div>
+      <div class='item2'>
+        <div class="img"></div>
+        <h3>Whislter <span class='flag'></span></h3>
+        <p>269 properties</p>
+        <div class='avgPrice'>
+          <h4>Average price</h4>
+          <p class='price'>CAD 174</p>
+        </div>
+      </div>
+      <div class='item3'>
+        <div class="img"></div>
+        <h3>Whislter <span class='flag'></span></h3>
+        <p>269 properties</p>
+        <div class='avgPrice'>
+          <h4>Average price</h4>
+          <p class='price'>CAD 174</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+<section id="sortedDeals">
+  <h3>Millions of homes, big or small… and you thought we only did hotels</h3>
+  <div class="dealsCarousel">
+    <div class="arrows">
+      <a class='left' href="" onclick="moveLeft(); return false;"><i class="fa fa-chevron-left"></i></a>
+      <a class='right' href="" onclick="moveRight(); return false; "><i class="fa fa-chevron-right"></i></a>
+    </div>
+    <ul>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <h4>Apartments1</h4>
+            <span>830,242 apartments</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <h4>Apartments2</h4>
+            <span>830,242 apartments</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <h4>Apartments3</h4>
+            <span>830,242 apartments</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <h4>Apartments4</h4>
+            <span>830,242 apartments</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <h4>Apartments5</h4>
+            <span>830,242 apartments</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <h4>Apartments6</h4>
+            <span>830,242 apartments</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <h4>Apartments7</h4>
+          <span>830,242 apartments</span>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <h4>Apartments8</h4>
+          <span>830,242 apartments</span>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <h4>Apartments9</h4>
+          <span>830,242 apartments</span>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <h4>Apartments10</h4>
+          <span>830,242 apartments</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section id="luxurySuites">
+  <h3>This is a 4 column carousel with different last item</h3>
+  <div class="dealsCarousel">
+    <div class="arrows">
+      <a class='left' href="" onclick="carouselTwoMoveLeft(); return false;"><i class="fa fa-chevron-left"></i></a>
+      <a class='right' href="" onclick="carouselTwoMoveRight(); return false; "><i class="fa fa-chevron-right"></i></a>
+    </div>
+    <ul>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <p>Apartments on Belinskogo ulitsa</p>
+            <span class='location'>Saint Petersburg</span>
+            <p class='price'><strong>Starting from CAD 420</strong></p>
+            <p><div class='rating'>9.7</div> <a href="">Exceptional</a> <span class='reviews'>. 32 reviews</span></p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <p>Apartments on Belinskogo ulitsa</p>
+            <span class='location'>Saint Petersburg</span>
+            <p class='price'><strong>Starting from CAD 420</strong></p>
+            <p><div class='rating'>9.7</div> <a href="">Exceptional</a> <span class='reviews'>. 32 reviews</span></p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <p>Apartments on Belinskogo ulitsa</p>
+            <span class='location'>Saint Petersburg</span>
+            <p class='price'><strong>Starting from CAD 420</strong></p>
+            <p><div class='rating'>9.7</div> <a href="">Exceptional</a> <span class='reviews'>. 32 reviews</span></p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <p>Apartments on Belinskogo ulitsa</p>
+            <span class='location'>Saint Petersburg</span>
+            <p class='price'><strong>Starting from CAD 420</strong></p>
+            <p><div class='rating'>9.7</div> <a href="">Exceptional</a> <span class='reviews'>. 32 reviews</span></p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <p>Apartments on Belinskogo ulitsa</p>
+            <span class='location'>Saint Petersburg</span>
+            <p class='price'><strong>Starting from CAD 420</strong></p>
+            <p><div class='rating'>9.7</div> <a href="">Exceptional</a> <span class='reviews'>. 32 reviews</span></p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <p>Apartments on Belinskogo ulitsa</p>
+            <span class='location'>Saint Petersburg</span>
+            <p class='price'><strong>Starting from CAD 420</strong></p>
+            <p><div class='rating'>9.7</div> <a href="">Exceptional</a> <span class='reviews'>. 32 reviews</span></p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <p>Apartments on Belinskogo ulitsa</p>
+            <span class='location'>Saint Petersburg</span>
+            <p class='price'><strong>Starting from CAD 420</strong></p>
+            <p><div class='rating'>9.7</div> <a href="">Exceptional</a> <span class='reviews'>. 32 reviews</span></p>
+          </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <p>Apartments on Belinskogo ulitsa</p>
+            <span class='location'>Saint Petersburg</span>
+            <p class='price'><strong>Starting from CAD 420</strong></p>
+            <p><div class='rating'>9.7</div> <a href="">Exceptional</a> <span class='reviews'>. 32 reviews</span></p>
+          </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class='img'>
+            <img src="./images/beds.jpg" alt="">
+          </div>
+          <div class='details'>
+            <p>Apartments on Belinskogo ulitsa</p>
+            <span class='location'>Saint Petersburg</span>
+            <p class='price'><strong>Starting from CAD 420</strong></p>
+            <p><div class='rating'>9.7</div> <a href="">Exceptional</a> <span class='reviews'>. 32 reviews</span></p>
+          </div>
+      </li>
+      <li>
+        <div class="box last">
+          <div class='img'>
+            <img class='last' src="./images/carousel-last-item-bg-img.jpg" alt="">
+          </div>
+          <div class='details'>
+            <p>We have lots more homes and apartments we think you'll love!</p>
+            <a href="">Search homes &amp; apartments</a>
+          </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</section>
+<section id="newsletterSignup">
+  <i class="fa fa-plane icon"></i>
+  <a href="" id='newsletterSignupCloseButton' class="close">
+    <i class="fa fa-times"></i>
+  </a>
+  <section class='details'>
+    <h3>Subscribe to see Secret Deals</h3>
+    <p>Prices drop the moment you sign up!</p>
+    <form action="">
+      <input type="email" placeholder="Enter email">
+      <button type='submit'>Sign me up!</button>
+    </form>
+  </section>
+</section>
+<section id="blogPosts">
+  <article>
+    <div class="backdrop"></div>
+    <div class="details">
+      <h3>5 blissful beachside restaurants in Brazil</h3>
+      <p>Featuring delectably fresh seafood accompanied by a sea breeze an ocean views.</p>
+    </div>
+  </article>
+  <article>
+    <div class="backdrop"></div>
+    <div class="details">
+      <h3>5 blissful beachside restaurants in Brazil</h3>
+      <p>Featuring delectably fresh seafood accompanied by a sea breeze an ocean views.</p>
+    </div>
+  </article>
+  <article>
+    <div class="backdrop"></div>
+    <div class="details">
+      <h3>5 blissful beachside restaurants in Brazil</h3>
+      <p>Featuring delectably fresh seafood accompanied by a sea breeze an ocean views.</p>
+    </div>
+  </article>
+  <article>
+    <div class="backdrop"></div>
+    <div class="details">
+      <h3>5 blissful beachside restaurants in Brazil</h3>
+      <p>Featuring delectably fresh seafood accompanied by a sea breeze an ocean views.</p>
+    </div>
+  </article>
+  <article>
+    <div class="backdrop"></div>
+    <div class="details">
+      <h3>5 blissful beachside restaurants in Brazil</h3>
+      <p>Featuring delectably fresh seafood accompanied by a sea breeze an ocean views.</p>
+    </div>
+  </article>
+</section>
+<section id="CSSTab">
+  <h2>Pure CSS Tab</h2>
+  <div id="pureCSSTab">
+    <input type="radio" id='travelInfoTab1' checked="checked" name='travelInfoTabs'>
+    <input type="radio" id='travelInfoTab2' name='travelInfoTabs'>
+    <input type="radio" id='travelInfoTab3' name='travelInfoTabs'>
+    <nav>
+      <ul>
+        <li class='travelInfoTab1'>
+          <label for="travelInfoTab1">Regions</label>
+        </li>
+        <li class='travelInfoTab2'>
+          <label for="travelInfoTab2">Cities</label>
+        </li>
+        <li class='travelInfoTab3'>
+          <label for="travelInfoTab3">Places of interest</label>
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <div class="travelInfoTab1">
+        <ul class='regions'>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+        </ul>
+      </div>
+      <div class="travelInfoTab2">
+        <ul class='regions'>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+            <li>
+              <a href="">Lanzarote</a>
+              <span>3,245 properties</span>
+            </li>
+          </ul>
+      </div>
+      <div class="travelInfoTab3">
+        <ul class='regions'>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+          <li>
+            <a href="">Lanzarote</a>
+            <span>3,245 properties</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</section>
+<section id="anotherPureCSSGalleryContainer">
+  <h2>Second Pure CSS Gallery</h2>
+  <div id="anotherPureCSSGallery">
+    <input checked='checked' type="radio" id='pureCSSGalleryTab1' name='pureCSSGallery'>
+    <input type="radio" id='pureCSSGalleryTab2' name='pureCSSGallery'>
+    <input type="radio" id='pureCSSGalleryTab3' name='pureCSSGallery'>
+    <input type="radio" id='pureCSSGalleryTab4' name='pureCSSGallery'>
+    <input type="radio" id='pureCSSGalleryTab5' name='pureCSSGallery'>
+    <input type="radio" id='pureCSSGalleryTab6' name='pureCSSGallery'>
+    <input type="radio" id='pureCSSGalleryTab7' name='pureCSSGallery'>
+    <input type="radio" id='pureCSSGalleryTab8' name='pureCSSGallery'>
+    <input type="radio" id='pureCSSGalleryTab9' name='pureCSSGallery'>
+    <input type="radio" id='pureCSSGalleryTab10' name='pureCSSGallery'>
+    <nav>
+      <ul>
+        <li class='tab1'>
+          <label for="pureCSSGalleryTab1">1</label>
+        </li>
+        <li class='tab2'>
+          <label for="pureCSSGalleryTab2">2</label>
+        </li>
+        <li class='tab3'>
+          <label for="pureCSSGalleryTab3">3</label>
+        </li>
+        <li class='tab4'>
+          <label for="pureCSSGalleryTab4">4</label>
+        </li>
+        <li class='tab5'>
+          <label for="pureCSSGalleryTab5">5</label>
+        </li>
+        <li class='tab6'>
+          <label for="pureCSSGalleryTab6">6</label>
+        </li>
+        <li class='tab7'>
+          <label for="pureCSSGalleryTab7">7</label>
+        </li>
+        <li class='tab8'>
+          <label for="pureCSSGalleryTab8">8</label>
+        </li>
+        <li class='tab9'>
+          <label for="pureCSSGalleryTab9">9</label>
+        </li>
+        <li class='tab10'>
+          <label for="pureCSSGalleryTab10">10</label>
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <div class="tab1">
+        <ul>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab2">
+        <ul>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab3">
+        <ul>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab4">
+        <ul>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab5">
+        <ul>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab6">
+        <ul>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab7">
+        <ul>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab8">
+        <ul>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab9">
+        <ul>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab10">
+        <ul>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><p>Enjoy your relaxation and find new restaurants that are laid out all over town.</p></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</section>
+<section id="newsletterSignup2">
+  <h3>Save time, save money!</h3>
+  <p>Sign up and we'll send the best deals to you</p>
+  <form action="">
+    <input class='email' type="email" placeholder="Your email">
+    <button>Subscribe</button><br><br>
+    <input type="checkbox" label='freeBookingApp' name='freeBookingApp'>
+    <label for="freeBookingApp">Send me a link to get the FREE Booking.com app!</label>
+  </form>
+</section>
+<section id="listYourProperty">
+  <button>List your property</button>
+</section>
+<div id="footerMenu1Container">
+  <section id="footerMenu1">
+    <ul>
+      <li><a href="">Menu Item</a></li>
+      <li><a href="">Menu Item</a></li>
+      <li><a href="">Menu Item</a></li>
+      <li><a href="">Menu Item</a></li>
+      <li><a href="">Menu Item</a></li>
+      <li><a href="">Menu Item</a></li>
+    </ul>
+  </section>
+</div>
+<div id="footerMenu2Container">
+  <section id="footerMenu2">
+    <section class="one">
+      <ul>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+      </ul>
+    </section>
+    <section class="two">
+      <ul>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+      </ul>
+    </section>
+    <section class="three">
+      <ul>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+      </ul>
+    </section>
+    <section class="four">
+      <ul>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+      </ul>
+    </section>
+    <section class="five">
+      <ul>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+        <li>
+          <a href="">Lorem Ipsum</a>
+        </li>
+      </ul>
+    </section>
+  </section>
+</div>
+<section id="termsOfService">
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis officiis incidunt magnam placeat iusto repellat sed ipsam nisi quos tempore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis officiis incidunt magnam placeat iusto repellat sed ipsam nisi quos tempore. <a href="">This is a link to another fantasy land.</a></p>
+</section>
+<section id="loginPortal">
+  <a href="">Extranet login</a>
+</section>
+<section id="copyright">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quidem.</p>
+</section>
+<section id="sponsors">
+  <ul>
+    <li><img src="./images/sponsor-logo.png" alt=""></li>
+    <li><img src="./images/sponsor-logo.png" alt=""></li>
+    <li><img src="./images/sponsor-logo.png" alt=""></li>
+    <li><img src="./images/sponsor-logo.png" alt=""></li>
+    <li><img src="./images/sponsor-logo.png" alt=""></li>
+  </ul>
+</section>
+</div>
+
+<!-- javascript file -->
+<script src='./js/script.js'></script>
+</body>
+</html>

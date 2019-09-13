@@ -1,0 +1,1076 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background-color: #003580;
+  color: #fff;
+}
+header #logo img {
+  height: 30px;
+  margin: 10px 0 15px 0;
+}
+header #signInSignUp {
+  margin-top: 10px;
+}
+header #signInSignUp .currency {
+  display: inline-block;
+  height: 24px;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+header #signInSignUp .flag {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  margin: 0 25px;
+  background: url("../images/canadian-flag-icon.png");
+}
+header #signInSignUp ul li a {
+  display: block;
+  text-decoration: none;
+  font-size: 0.7rem;
+  padding: 6px 7px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+header #signInSignUp .transparent {
+  font-weight: 600;
+}
+header #signInSignUp .transparent:hover {
+  background-color: rgba(224, 224, 224, 0.2);
+}
+header #signInSignUp .regular {
+  border-radius: 5px;
+  background-color: #fff;
+  margin-left: 15px;
+}
+header #signInSignUp .regular a {
+  color: #003580;
+  font-weight: 900;
+}
+header #signInSignUp .regular :hover {
+  color: purple;
+}
+header #headerBox {
+  position: relative;
+  width: 1100px;
+  margin: auto;
+}
+header #headerBox #signInSignUp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+}
+header #headerBox #signInSignUp .transparent a {
+  color: #fff;
+}
+header #headerBox #signInSignUp ul {
+  list-style: none;
+}
+header #headerBox #signInSignUp ul li {
+  float: left;
+}
+header #headerBox nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+header #headerBox nav ul li {
+  flex: 1;
+}
+header #headerBox nav ul li a {
+  position: relative;
+  display: inline-block;
+  color: #e0e0e0;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 15px 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+header #headerBox nav ul li a i {
+  margin-right: 10px;
+}
+header #headerBox nav ul li :hover {
+  color: #fff;
+  transition: color 0.3s;
+}
+header #headerBox nav ul li .active {
+  border-bottom: 4px solid white;
+}
+header #headerBox nav ul li :not(.active):after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  height: 4px;
+  left: 50%;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+header #headerBox nav ul li :hover:after {
+  width: 100%;
+  left: 0;
+}
+
+#bookingForm {
+  background-color: #F7F7F7;
+  border-bottom: 1px solid #dbdbdb;
+}
+#bookingForm #bookingFormBox {
+  width: 1100px;
+  margin: auto;
+  color: #383838;
+}
+#bookingForm #bookingFormBox form div {
+  box-shadow: 0px 0px 29px -9px rgba(0, 0, 0, 0.55);
+  display: flex;
+}
+#bookingForm #bookingFormBox form div input {
+  font-size: 1rem;
+}
+#bookingForm #bookingFormBox form div input.destination {
+  flex: 5;
+}
+#bookingForm #bookingFormBox form div input.dates {
+  flex: 2;
+}
+#bookingForm #bookingFormBox form div input.people {
+  flex: 2;
+}
+#bookingForm #bookingFormBox form div input.submit {
+  flex: 1;
+  margin: 0;
+  padding: 16px;
+  height: 100%;
+  line-height: 100%;
+  background-color: #0077CC;
+  line-height: 100%;
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+#bookingForm #bookingFormBox form div input.submit:hover {
+  background-color: #0a51b6;
+}
+#bookingForm #bookingFormBox form .work[type=checkbox] {
+  display: none;
+}
+#bookingForm #bookingFormBox form .work[type=checkbox] + label {
+  cursor: pointer;
+}
+#bookingForm #bookingFormBox form .work[type=checkbox] + label:before {
+  content: "✔";
+  border: 0.1em solid #707070;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  color: transparent;
+  transition: 0.2s;
+  margin-top: 22px;
+  margin-bottom: 30px;
+}
+#bookingForm #bookingFormBox form .work[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+#bookingForm #bookingFormBox form input.work[type=checkbox]:checked + label:before {
+  background-color: blueviolet;
+  border-color: blueviolet;
+  color: #fff;
+}
+#bookingForm #bookingFormBox h2 {
+  padding: 40px 0 0 0;
+  margin-bottom: 5px;
+}
+#bookingForm #bookingFormBox p {
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+#bookingForm #bookingFormBox input:not(.work) {
+  display: inline-block;
+  margin: 0;
+  padding: 24px 30px;
+  outline: 3px solid yellow;
+  border: none;
+  height: 30px;
+}
+
+#dealsGallery {
+  width: 1100px;
+  margin: auto;
+}
+#dealsGallery #todaysSpecialDeal {
+  margin: 15px 0 0 0;
+  border: 1px solid #dbdbdb;
+  padding: 15px;
+  font-size: 0.8rem;
+}
+#dealsGallery #todaysSpecialDeal p {
+  display: inline;
+}
+#dealsGallery #todaysSpecialDeal a {
+  font-weight: bold;
+}
+#dealsGallery #todaysSpecialDeal a:hover {
+  color: #d4d410;
+}
+#dealsGallery #todaysSpecialDeal .doughnut {
+  vertical-align: middle;
+  height: 25px;
+  width: 25px;
+  margin-right: 15px;
+}
+#dealsGallery #todaysSpecialDeal .close {
+  float: right;
+  color: #dbdbdb;
+  font-size: 25px;
+}
+#dealsGallery #todaysSpecialDeal.hide {
+  display: none;
+}
+#dealsGallery #locationPictureGallery {
+  margin-top: 25px;
+}
+#dealsGallery .large,
+#dealsGallery .medium {
+  color: #fff;
+  text-shadow: 1px 1px #000;
+  border-radius: 2px;
+}
+#dealsGallery .large {
+  width: 1100px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 15px;
+  margin-bottom: 15px;
+  border-radius: 2px;
+}
+#dealsGallery .large div.item1,
+#dealsGallery .large div.item2 {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  width: auto;
+  height: 280px;
+  padding: 15px 10px 10px 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+#dealsGallery .large div.item1 .img,
+#dealsGallery .large div.item2 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/skiresort.jpg");
+  background-size: cover;
+  background-repeat: none;
+  transition: all 0.5s;
+}
+#dealsGallery .large div.item1:hover .img,
+#dealsGallery .large div.item2:hover .img {
+  transform: scale(1.15);
+}
+#dealsGallery .large div.item1 h3,
+#dealsGallery .large div.item2 h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#dealsGallery .large div.item1 h3 span.flag,
+#dealsGallery .large div.item2 h3 span.flag {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-image: url("../images/canadian-flag-icon.png");
+  margin-bottom: -5px;
+}
+#dealsGallery .large div.item1 p,
+#dealsGallery .large div.item2 p {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+#dealsGallery .large div.item1 .avgPrice,
+#dealsGallery .large div.item2 .avgPrice {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  display: inline-block;
+  background-color: #383838;
+  border-radius: 2px;
+  padding: 5px;
+}
+#dealsGallery .large div.item1 .avgPrice h4,
+#dealsGallery .large div.item2 .avgPrice h4 {
+  font-size: 0.7rem;
+}
+#dealsGallery .medium {
+  width: 1100px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 15px;
+}
+#dealsGallery .medium div.item1,
+#dealsGallery .medium div.item2,
+#dealsGallery .medium div.item3 {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 280px;
+  overflow: hidden;
+  cursor: pointer;
+}
+#dealsGallery .medium div.item1 .img,
+#dealsGallery .medium div.item2 .img,
+#dealsGallery .medium div.item3 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/building.jpg");
+  background-size: cover;
+  background-position: center center;
+  transition: all 0.5s;
+}
+#dealsGallery .medium div.item1:hover .img,
+#dealsGallery .medium div.item2:hover .img,
+#dealsGallery .medium div.item3:hover .img {
+  transform: scale(1.15);
+}
+#dealsGallery .medium div.item1 h3,
+#dealsGallery .medium div.item2 h3,
+#dealsGallery .medium div.item3 h3 {
+  margin: 10px 0 0 10px;
+}
+#dealsGallery .medium div.item1 p,
+#dealsGallery .medium div.item2 p,
+#dealsGallery .medium div.item3 p {
+  margin-left: 10px;
+}
+#dealsGallery .medium div.item1 .avgPrice,
+#dealsGallery .medium div.item2 .avgPrice,
+#dealsGallery .medium div.item3 .avgPrice {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  display: inline-block;
+  background-color: #383838;
+  border-radius: 2px;
+  padding: 5px;
+}
+#dealsGallery .medium div.item1 .avgPrice h4,
+#dealsGallery .medium div.item2 .avgPrice h4,
+#dealsGallery .medium div.item3 .avgPrice h4 {
+  font-size: 0.7rem;
+}
+
+#sortedDeals {
+  width: 1100px;
+  margin: 0 auto;
+}
+#sortedDeals h3 {
+  font-weight: 900;
+  font-size: 1.3rem;
+  margin: 35px 0 25px;
+}
+#sortedDeals .dealsCarousel {
+  overflow: hidden;
+}
+#sortedDeals .dealsCarousel .arrows {
+  position: relative;
+  z-index: 100;
+}
+#sortedDeals .dealsCarousel .arrows .left {
+  position: absolute;
+  left: 10px;
+  top: 110px;
+  font-size: 1.5em;
+  border-radius: 50%;
+  color: #383838;
+  background: #fff;
+  width: 36px;
+  height: 36px;
+  opacity: 0.8;
+  padding-left: 9px;
+  padding-top: 4px;
+  border: 1px solid grey;
+  transition: all 0.2s;
+}
+#sortedDeals .dealsCarousel .arrows .right {
+  position: absolute;
+  right: 10px;
+  top: 110px;
+  font-size: 1.5em;
+  border-radius: 50%;
+  color: #383838;
+  background: #fff;
+  width: 36px;
+  height: 36px;
+  opacity: 0.8;
+  padding-left: 10px;
+  padding-top: 4px;
+  border: 1px solid grey;
+  transition: all 0.2s;
+}
+#sortedDeals .dealsCarousel .arrows .left:hover,
+#sortedDeals .dealsCarousel .arrows .right:hover {
+  top: 112px;
+  opacity: 1;
+}
+#sortedDeals ul {
+  position: relative;
+  width: 200%;
+  height: 300px;
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  overflow: hidden;
+  left: 0;
+  transition: left 0.5s;
+}
+#sortedDeals ul li {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+}
+#sortedDeals ul li .img {
+  left: 50%;
+  margin-left: -50%;
+}
+#sortedDeals ul li .img img {
+  width: 100%;
+  height: 250px;
+}
+#sortedDeals ul li .box {
+  overflow: hidden;
+}
+#sortedDeals ul li .box .details {
+  margin-left: 2px;
+}
+
+#luxurySuites {
+  width: 1100px;
+  margin: 0 auto;
+}
+#luxurySuites h3 {
+  font-weight: 900;
+  font-size: 1.3rem;
+  margin: 35px 0 25px;
+}
+#luxurySuites .dealsCarousel {
+  overflow: hidden;
+}
+#luxurySuites .dealsCarousel .arrows {
+  position: relative;
+  z-index: 100;
+}
+#luxurySuites .dealsCarousel .arrows .left {
+  position: absolute;
+  left: 10px;
+  top: 110px;
+  font-size: 1.5em;
+  border-radius: 50%;
+  color: #383838;
+  background: #fff;
+  width: 36px;
+  height: 36px;
+  opacity: 0.8;
+  padding-left: 9px;
+  padding-top: 4px;
+  border: 1px solid grey;
+  transition: all 0.2s;
+}
+#luxurySuites .dealsCarousel .arrows .right {
+  position: absolute;
+  right: 10px;
+  top: 110px;
+  font-size: 1.5em;
+  border-radius: 50%;
+  color: #383838;
+  background: #fff;
+  width: 36px;
+  height: 36px;
+  opacity: 0.8;
+  padding-left: 10px;
+  padding-top: 4px;
+  border: 1px solid grey;
+  transition: all 0.2s;
+}
+#luxurySuites .dealsCarousel .arrows .left:hover,
+#luxurySuites .dealsCarousel .arrows .right:hover {
+  top: 112px;
+  opacity: 1;
+}
+#luxurySuites ul {
+  position: relative;
+  width: 250%;
+  height: 360px;
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  overflow: hidden;
+  left: 0;
+  transition: left 0.5s;
+}
+#luxurySuites ul li {
+  position: relative;
+  overflow: hidden;
+  width: 265px;
+  height: 360px;
+}
+#luxurySuites ul li .img {
+  left: 50%;
+  margin-left: -50%;
+}
+#luxurySuites ul li .img img {
+  width: 100%;
+}
+#luxurySuites ul li .img img:not(.last) {
+  height: 250px;
+}
+#luxurySuites ul li .box {
+  overflow: hidden;
+}
+#luxurySuites ul li .box .details {
+  margin-left: 2px;
+}
+#luxurySuites ul li .box.last {
+  position: relative;
+}
+#luxurySuites ul li .box.last .img {
+  height: 100%;
+}
+#luxurySuites ul li .box.last .img img.last {
+  height: 360px;
+}
+#luxurySuites ul li .box.last .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+#luxurySuites ul li .box.last .details p {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 15px;
+  line-height: 25px;
+  opacity: 0.9;
+}
+#luxurySuites ul li .box.last .details a {
+  position: absolute;
+  bottom: 5px;
+  display: block;
+  width: 88%;
+  text-align: center;
+  padding: 15px;
+  margin: 15px;
+  border: 1px solid purple;
+  color: purple;
+  background-color: #fff;
+}
+#luxurySuites ul li .details p {
+  font-size: 0.8rem;
+}
+#luxurySuites ul li .details > span.location {
+  display: block;
+  font-size: 0.8em;
+  color: grey;
+  margin-top: 2px;
+  margin-bottom: 6px;
+}
+#luxurySuites ul li .details p.price {
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+#luxurySuites ul li .details p.price > strong {
+  color: #464646;
+}
+#luxurySuites ul li .details .rating {
+  display: inline-block;
+  background-color: #003580;
+  border-radius: 8px;
+  border-bottom-left-radius: 0px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 5px;
+}
+#luxurySuites ul li .details a {
+  color: #003580;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+#luxurySuites ul li .details .reviews {
+  font-size: 0.7rem;
+  color: grey;
+}
+
+#newsletterSignup {
+  position: relative;
+  width: 1100px;
+  margin: 35px auto;
+  border: 1px solid #dbdbdb;
+  padding: 25px;
+  font-size: 0.8rem;
+}
+#newsletterSignup .icon {
+  position: absolute;
+  font-size: 50px;
+  top: 25px;
+  left: 25px;
+}
+#newsletterSignup #newsletterSignupCloseButton {
+  float: right;
+  color: #dbdbdb;
+  font-size: 25px;
+}
+#newsletterSignup a#newsletterSignupCloseButton:hover {
+  color: orange;
+}
+#newsletterSignup .details {
+  margin-left: 60px;
+}
+#newsletterSignup .details h3 {
+  margin-bottom: 10px;
+}
+#newsletterSignup .details p {
+  margin-bottom: 20px;
+}
+#newsletterSignup .details input {
+  height: 40px;
+  padding: 5px 10px;
+  width: 450px;
+  border: 1px solid #b8b8b8;
+}
+#newsletterSignup .details button {
+  background: transparent;
+  outline: 1px solid blue;
+  border: none;
+  padding: 11px;
+  color: blue;
+  cursor: pointer;
+  margin-left: 7px;
+}
+#newsletterSignup .details button:hover {
+  background-color: #b0ebff;
+}
+
+#newsletterSignup.hide {
+  display: none;
+}
+
+#blogPosts {
+  width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "small-left small-left small-middle small-middle small-right small-right" "big-left big-left big-left big-right big-right big-right";
+  grid-gap: 10px;
+}
+#blogPosts .backdrop {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.459) 0%, rgba(255, 255, 255, 0) 21%, rgba(255, 255, 255, 0) 100%);
+  transition: all 0.3s;
+}
+#blogPosts article {
+  position: relative;
+  background-size: cover;
+  color: white;
+  height: 300px;
+  background-image: url("../images/stoneman.jpg");
+  background-size: cover;
+  border-radius: 2px;
+  cursor: pointer;
+}
+#blogPosts article .details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 13px;
+  text-shadow: 1px 1px 5px #000;
+}
+#blogPosts article .details h3 {
+  font-weight: bold;
+  margin-bottom: 5px;
+  line-height: 1.8rem;
+}
+#blogPosts article .details p {
+  font-weight: bold;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+}
+#blogPosts article:hover .backdrop {
+  display: block;
+}
+#blogPosts article:nth-child(1) {
+  grid-area: small-left;
+}
+#blogPosts article:nth-child(2) {
+  grid-area: small-middle;
+}
+#blogPosts article:nth-child(3) {
+  grid-area: small-right;
+}
+#blogPosts article:nth-child(4) {
+  grid-area: big-left;
+}
+#blogPosts article:nth-child(5) {
+  grid-area: big-right;
+}
+
+#pureCSSTab > input,
+#pureCSSTab section > div {
+  display: none;
+}
+
+#travelInfoTab1:checked ~ section .travelInfoTab1,
+#travelInfoTab2:checked ~ section .travelInfoTab2,
+#travelInfoTab3:checked ~ section .travelInfoTab3 {
+  display: block;
+}
+
+#travelInfoTab1:checked ~ nav .travelInfoTab1,
+#travelInfoTab2:checked ~ nav .travelInfoTab2,
+#travelInfoTab3:checked ~ nav .travelInfoTab3 {
+  background-color: #0077CC;
+  color: #fff;
+}
+
+#CSSTab {
+  width: 1100px;
+  margin: 25px auto;
+}
+#CSSTab nav ul {
+  display: block;
+  line-height: 30px;
+  list-style: none;
+  border-bottom: 1px solid #0077CC;
+  width: 100%;
+  font-size: 0.8rem;
+}
+#CSSTab nav ul li {
+  display: inline-block;
+  padding: 0 15px;
+  cursor: pointer;
+}
+#CSSTab nav ul li label {
+  cursor: pointer;
+}
+#CSSTab section {
+  clear: both;
+}
+#CSSTab section ul.regions {
+  columns: 5;
+  list-style: none;
+  padding: 15px 0;
+}
+#CSSTab section ul.regions li {
+  display: block;
+  padding-bottom: 10px;
+}
+#CSSTab section ul.regions li a {
+  display: block;
+  color: #0077CC;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+#CSSTab section ul.regions li a:hover {
+  color: orange;
+}
+#CSSTab section ul.regions li span {
+  font-size: 0.7rem;
+  color: grey;
+}
+
+#anotherPureCSSGalleryContainer {
+  width: 1100px;
+  margin: 25px auto;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery nav {
+  float: right;
+  margin-bottom: 10px;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery nav ul {
+  list-style: none;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery nav ul li {
+  font-size: 0.8rem;
+  display: inline-block;
+  background-color: grey;
+  padding: 4px 7px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery nav ul li label {
+  cursor: pointer;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery nav ul li:hover {
+  background-color: #0077CC;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery > input,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section > div {
+  display: none;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section {
+  clear: both;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div ul {
+  display: block;
+  list-style: none;
+  columns: 5;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div ul li a {
+  display: block;
+  width: 100%;
+  height: 200px;
+  background: url(../images/golf-field.jpg);
+  text-decoration: none;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div ul li a div {
+  background-color: rgba(0, 0, 0, 0.294);
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div ul li a div p {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.5s;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div ul li a:hover div {
+  height: 100%;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div ul li a:hover div p {
+  padding-top: 75px;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div.tab2 li a {
+  background: url(../images/skiresort.jpg);
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div.tab3 li a {
+  background: url(../images/beds.jpg);
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div.tab4 li a {
+  background: url(../images/stoneman.jpg);
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div.tab5 li a {
+  background: url(../images/skiresort.jpg);
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div.tab6 li a {
+  background: url(../images/golf-field.jpg);
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div.tab7 li a {
+  background: url(../images/beds.jpg);
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div.tab8 li a {
+  background: url(../images/skiresort.jpg);
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div.tab9 li a {
+  background: url(../images/stoneman.jpg);
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery section div.tab10 li a {
+  background: url(../images/skiresort.jpg);
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab1:checked ~ section .tab1,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab2:checked ~ section .tab2,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab3:checked ~ section .tab3,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab4:checked ~ section .tab4,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab5:checked ~ section .tab5,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab6:checked ~ section .tab6,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab7:checked ~ section .tab7,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab8:checked ~ section .tab8,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab9:checked ~ section .tab9,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab10:checked ~ section .tab10 {
+  display: block;
+}
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab1:checked ~ nav .tab1,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab2:checked ~ nav .tab2,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab3:checked ~ nav .tab3,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab4:checked ~ nav .tab4,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab5:checked ~ nav .tab5,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab6:checked ~ nav .tab6,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab7:checked ~ nav .tab7,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab8:checked ~ nav .tab8,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab9:checked ~ nav .tab9,
+#anotherPureCSSGalleryContainer #anotherPureCSSGallery #pureCSSGalleryTab10:checked ~ nav .tab10 {
+  background-color: #0077CC;
+}
+#newsletterSignup2 {
+  margin-top: 45px;
+  background-color: #001B42;
+  text-align: center;
+  padding-bottom: 10px;
+}
+#newsletterSignup2 h3 {
+  color: #fff;
+  font-weight: 300;
+  padding-top: 40px;
+  font-size: 1.6rem;
+}
+#newsletterSignup2 p {
+  color: #b1b1b1;
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+#newsletterSignup2 form {
+  padding: 15px 0 30px 0;
+}
+#newsletterSignup2 form input.email {
+  line-height: 50px;
+  border-radius: 3px;
+  border: none;
+  width: 300px;
+  padding: 0 8px;
+  font-size: 1.3rem;
+}
+#newsletterSignup2 form button {
+  line-height: 50px;
+  border: none;
+  background-color: #0077CC;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 3px;
+  padding: 0 20px;
+}
+#newsletterSignup2 form label {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+#listYourProperty {
+  width: 100%;
+  background-color: #003580;
+  text-align: center;
+  border-bottom: 1px solid grey;
+}
+#listYourProperty button {
+  margin: 25px 0;
+  background: transparent;
+  border: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 7px 16px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+#listYourProperty button:hover {
+  background-color: rgba(255, 255, 255, 0.233);
+}
+
+#footerMenu1Container {
+  background-color: #003580;
+}
+#footerMenu1Container #footerMenu1 {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 18px 0;
+}
+#footerMenu1Container #footerMenu1 ul {
+  columns: 6;
+  color: #fff;
+  list-style: none;
+}
+#footerMenu1Container #footerMenu1 ul li a {
+  color: #fff;
+  font-weight: 600;
+}
+
+#footerMenu2Container #footerMenu2 {
+  width: 1100px;
+  margin: 10px auto;
+  columns: 5;
+}
+#footerMenu2Container #footerMenu2 ul {
+  list-style: none;
+}
+#footerMenu2Container #footerMenu2 ul li a {
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+#footerMenu2Container #footerMenu2 ul li a:hover {
+  color: orange;
+}
+
+#termsOfService {
+  width: 1100px;
+  margin: 30px auto;
+  border-top: 1px solid #c3c3c3;
+  border-bottom: 1px solid #c3c3c3;
+}
+#termsOfService p {
+  font-size: 0.7rem;
+  padding: 10px 0;
+}
+#termsOfService a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0077CC;
+}
+#termsOfService a:hover {
+  color: orange;
+}
+
+#loginPortal {
+  text-align: center;
+}
+#loginPortal a {
+  color: #0077CC;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+#loginPortal a:hover {
+  color: orange;
+}
+
+#copyright {
+  margin-top: 30px;
+  text-align: center;
+  color: grey;
+  font-size: 0.7rem;
+}
+
+#sponsors {
+  width: 800px;
+  margin: 30px auto 60px auto;
+}
+#sponsors ul {
+  columns: 5;
+  list-style: none;
+}
+
+/*# sourceMappingURL=style.css.map */
